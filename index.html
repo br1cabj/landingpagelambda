@@ -6,6 +6,15 @@
 <title>Lambda Soluciones Digitales | Sistemas Web de Alto Rendimiento</title>
 <meta name="description" content="Sistemas web robustos, ultra-rápidos y de alta conversión para negocios que buscan escalar. Desarrollo de software a medida por Lambda.">
 
+<!-- SEO y Open Graph -->
+<meta property="og:title" content="Lambda Soluciones Digitales | Sistemas Web de Alto Rendimiento">
+<meta property="og:description" content="Sistemas web robustos, ultra-rápidos y de alta conversión para negocios que buscan escalar.">
+<meta property="og:image" content="https://tusitio.com/og-image.jpg">
+<meta property="og:url" content="https://tusitio.com">
+<meta property="og:type" content="website">
+<!-- Favicon SVG dinámico y ligero -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>λ</text></svg>">
+
 <!-- CSS Local de Bootstrap -->
 <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 
@@ -54,11 +63,13 @@
     </div>
 </nav>
 
+<!-- CONTENIDO PRINCIPAL -->
+<main>
 <!-- SECCIÓN DE BIENVENIDA / HERO -->
 <section id="inicio" class="hero-section">
     <div class="container text-center">
     <div class="row justify-content-center">
-        <div class="col-lg-10">
+        <div class="col-lg-10 reveal-on-scroll">
         <div class="badge bg-dark border border-secondary text-gold px-3 py-2 mb-4 rounded-pill">
             <span class="text-purple"></span> Código de alto rendimiento a medida
         </div>
@@ -80,9 +91,9 @@
 <!-- SECCIÓN EL DOLOR -->
 <section id="dolor" class="dolor-section">
     <div class="container">
-    <div class="row align-items-center">
+    <div class="row align-items-center reveal-on-scroll">
         <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start">
-        <div class="pain-metric text-green glow-text-green">0.8s</div>
+        <div class="pain-metric text-green glow-text-green" id="speed-metric" data-target="0.8">0.0s</div>
         <div class="h5 text-uppercase tracking-wider text-muted mt-3">Tiempo de Carga Promedio Lambda</div>
         </div>
         <div class="col-lg-6">
@@ -108,7 +119,7 @@
     </div>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
         <!-- Landing Pages -->
-        <div class="col">
+        <div class="col reveal-on-scroll delay-100">
         <div class="service-card p-4 d-flex flex-column justify-content-between">
             <div>
             <div class="service-icon-wrapper text-purple">
@@ -125,7 +136,7 @@
         </div>
         </div>
         <!-- Webs Corporativas -->
-        <div class="col">
+        <div class="col reveal-on-scroll delay-200">
         <div class="service-card p-4 d-flex flex-column justify-content-between">
             <div>
             <div class="service-icon-wrapper text-purple">
@@ -142,7 +153,7 @@
         </div>
         </div>
         <!-- Sistemas a Medida -->
-        <div class="col">
+        <div class="col reveal-on-scroll delay-300">
         <div class="service-card p-4 d-flex flex-column justify-content-between">
             <div>
             <div class="service-icon-wrapper text-purple">
@@ -159,7 +170,7 @@
         </div>
         </div>
         <!-- Aplicaciones -->
-        <div class="col">
+        <div class="col reveal-on-scroll delay-400">
         <div class="service-card p-4 d-flex flex-column justify-content-between">
             <div>
             <div class="service-icon-wrapper text-purple">
@@ -179,7 +190,50 @@
     </div>
 </section>
 
-<!-- SECCIÓN STACK TECNOLÓGICO -->
+<!-- SECCIÓN CASOS DE ÉXITO / PORTAFOLIO -->
+<section id="portafolio" class="portfolio-section">
+    <div class="container">
+        <div class="text-center mb-5 reveal-on-scroll">
+            <h2 class="display-5 fw-bold text-bright mb-3">Casos de Éxito</h2>
+            <p class="text-muted mx-auto" style="max-width: 600px;">
+                Resultados medibles y sistemas robustos entregados a clientes reales.
+            </p>
+        </div>
+        <div class="row g-4">
+            <!-- Caso 1 -->
+            <div class="col-lg-4 reveal-on-scroll delay-100">
+                <div class="portfolio-card">
+                    <!-- Placeholder de imagen -->
+                    <div class="portfolio-img d-flex align-items-center justify-content-center bg-dark text-muted">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    </div>
+                    <div class="portfolio-card-body">
+                        <span class="badge bg-purple bg-opacity-10 text-purple mb-2">E-Commerce SaaS</span>
+                        <h4 class="fw-bold text-bright">Plataforma B2B Global</h4>
+                        <p class="text-muted small">Aumentamos la tasa de conversión en un 45% reduciendo el tiempo de carga a menos de 1 segundo.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonio 1 -->
+            <div class="col-lg-8 reveal-on-scroll delay-200">
+                <div class="testimonial-card h-100 d-flex flex-column justify-content-center">
+                    <div class="testimonial-icon">"</div>
+                    <p class="lead text-bright fst-italic mb-4" style="position: relative; z-index: 2;">
+                        "Lambda no solo reescribió nuestro sistema, cambiaron la forma en que operamos. La velocidad de la nueva plataforma nos permitió duplicar nuestro volumen de ventas sin caídas en el servidor. Son unos verdaderos artesanos del código."
+                    </p>
+                    <div class="d-flex align-items-center">
+                        <div class="rounded-circle bg-dark border border-secondary me-3" style="width: 50px; height: 50px;"></div>
+                        <div>
+                            <h5 class="fw-bold text-bright mb-0">Carlos Mendoza</h5>
+                            <span class="text-gold small">CTO en TechFlow Solutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- SECCIÓN STACK TECNOLÓGICO -->
 <section id="stack" class="tech-section py-5">
     <div class="container text-center">
@@ -257,7 +311,7 @@
     </div>
     <div class="row g-4">
         <!-- Paso 1 -->
-        <div class="col-md-3">
+        <div class="col-md-3 reveal-on-scroll delay-100">
         <div class="method-step p-4">
             <div class="step-header">
             <span class="step-number">01</span>
@@ -270,7 +324,7 @@
         </div>
         </div>
         <!-- Paso 2 -->
-        <div class="col-md-3">
+        <div class="col-md-3 reveal-on-scroll delay-200">
         <div class="method-step p-4">
             <div class="step-header">
             <span class="step-number">02</span>
@@ -283,7 +337,7 @@
         </div>
         </div>
         <!-- Paso 3 -->
-        <div class="col-md-3">
+        <div class="col-md-3 reveal-on-scroll delay-300">
         <div class="method-step p-4">
             <div class="step-header">
             <span class="step-number">03</span>
@@ -296,7 +350,7 @@
         </div>
         </div>
         <!-- Paso 4 -->
-        <div class="col-md-3">
+        <div class="col-md-3 reveal-on-scroll delay-400">
         <div class="method-step p-4">
             <div class="step-header">
             <span class="step-number">04</span>
@@ -339,6 +393,7 @@
     </div>
     </div>
 </section>
+</main>
 
 <!-- PIE DE PÁGINA / FOOTER -->
 <footer class="custom-footer">
@@ -361,5 +416,6 @@
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="background.js"></script>
+<script src="main.js"></script>
 </body>
 </html>

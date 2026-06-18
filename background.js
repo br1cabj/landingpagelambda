@@ -110,16 +110,40 @@ function connect() {
 }
 
 // Bucle principal de renderizado
+let isCanvasVisible = true;
+let animationFrameId;
+
 function animate() {
-    requestAnimationFrame(animate);
+    if (!isCanvasVisible) return; // Pausa el bucle si no es visible
+    
     ctx.clearRect(0, 0, innerWidth, innerHeight); // Limpiar el lienzo
     
     for (let i = 0; i < particlesArray.length; i++) {
         particlesArray[i].update();
     }
     connect();
+    animationFrameId = requestAnimationFrame(animate);
 }
 
 // Arrancar el motor
 init();
 animate();
+
+// Optimización: Pausar el canvas cuando el Hero no es visible
+const heroSection = document.getElementById('inicio');
+if (heroSection) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                if (!isCanvasVisible) {
+                    isCanvasVisible = true;
+                    animate(); // Reanudar animación
+                }
+            } else {
+                isCanvasVisible = false; // Pausar animación
+                cancelAnimationFrame(animationFrameId);
+            }
+        });
+    }, { threshold: 0 }); // 0 = cuando salga completamente de la pantalla
+    observer.observe(heroSection);
+}
